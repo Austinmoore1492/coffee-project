@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Coffee!</h1>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Coffee Time!</h1>
+
+  <div class="container">
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+      <input type="text" id="search" placeholder="Search By Name">
+      <label for="roast-selection"></label>
+      <select id="roast-selection">
+            <option>All</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
         </select>
-        <input id="submit" type="submit" />
+      <button type="button" id="submit">Submit</button>
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div id="coffeeType">
+    </div>
+  </div>
 
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
