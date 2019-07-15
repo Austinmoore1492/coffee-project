@@ -1,9 +1,141 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+  background: #f0f0f0;
+  font-family: "Raleway", Arial;
+}
+
+h1 {
+  background: #003b6f;
+  color: #f1f1f1;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 2rem auto;
+  background: #ccc;
+  color: #1d1d1d;
+  border-radius: 5px;
+}
+
+form,
+#coffeeType {
+  padding: 1rem;
+  word-wrap: break-word;
+}
+
+#roast-selection, #search {
+  display: block;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f0f0f0;
+  margin: 1rem auto;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+#roast-selection:hover, #search:hover {
+  background: #e0e0e0;
+}
+
+#roast-selection:focus, #search:focus {
+  outline: none;
+  border: 1px solid #003b6f;
+  border-radius: 5px;
+}
+
+#search {
+  border: 1px solid #ccc;
+}
+#submit {
+  display: block;
+  width: 50%;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 5px;
+  background: #003b6f;
+  color: #f0f0f0;
+  border: 1px solid #003b6f;
+  border-radius: 5px;
+  transition: all 0.8s ease;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background: #f0f0f0;
+  color: #003b6f;
+}
+
+#submit:focus {
+  outline: none;
+  border: 1px solid #003b6f;
+  border-radius: 5px;
+}
+
+#coffeeType {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  text-align: center;
+}
+
+.coffee {
+  border-bottom: 1px solid #003b6f;
+  padding-bottom: 10px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.coffeeHeader {
+  font-size: 1.4rem;
+}
+
+.coffeeRoast {
+  font-size: 1.2rem;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  #coffeeType {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  #roast-selection, #search {
+    width: 80%;
+  }
+  #submit {
+    width: 70%;
+  }
+
+  #coffeeType {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .coffee {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
 }
